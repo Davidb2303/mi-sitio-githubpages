@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Briefing interactivo sobre fundamentos y principios de la Interacción Humano-Computadora aplicados al diseño UX." />
-  <title>Fundamentos HCI | Briefing Interactivo</title>
+  <meta name="description" content="Sitio interactivo de Grano y Fuego, tienda de café de especialidad: origen, tueste y experiencia en tienda." />
+  <title>Grano y Fuego | Café de especialidad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -364,7 +364,7 @@
 
     .target-small:hover, .target-large:hover { background: var(--accent-dark); }
     .target-small { width: 26px; height: 26px; font-size: 0; }
-    .target-large { width: 60px; height: 60px; font-weight: 700; }
+    .target-large { width: 60px; height: 60px; font-weight: 700; font-size: .8rem; }
 
     .choice-grid {
       display: grid;
@@ -636,16 +636,16 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Inicio, Fundamentos HCI">
-        <span class="brand-mark">Fundamentos</span>
-        <span>HCI</span>
+      <a class="brand" href="#inicio" aria-label="Inicio, Grano y Fuego">
+        <span class="brand-mark">Grano</span>
+        <span>y Fuego</span>
       </a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="#fundamentos">Fundamentos</a></li>
-          <li><a href="#leyes">Leyes</a></li>
-          <li><a href="#herramientas">Herramientas</a></li>
-          <li><a href="#aplicacion">Aplicación</a></li>
+          <li><a href="#origen">Origen</a></li>
+          <li><a href="#cafes">Cafés</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#pedido">Pedir</a></li>
         </ul>
       </nav>
     </div>
@@ -655,157 +655,152 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Briefing interactivo</span>
-          <h1>Interfaces que las personas puedan comprender, usar y explicar.</h1>
+          <span class="eyebrow">Tienda de café de especialidad</span>
+          <h1>Café tostado en pequeños lotes, directo de la finca a tu taza.</h1>
           <p>
-            Una introducción práctica a la Interacción Humano-Computadora, la psicología cognitiva y los principios de UX aplicados a decisiones de diseño basadas en evidencia.
+            Seleccionamos, tostamos y empacamos cada semana en nuestro taller. Trabajamos con caficultores de Colombia, Etiopía y Guatemala para ofrecerte un café trazable, fresco y con carácter.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#leyes">Explorar principios</a>
-            <a class="btn btn-secondary" href="#aplicacion">Ver caso práctico</a>
+            <a class="btn btn-primary" href="#cafes">Ver catálogo de cafés</a>
+            <a class="btn btn-secondary" href="#pedido">Suscribirme a un plan</a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Resumen de criterios del briefing">
+        <aside class="hero-panel" aria-label="Resumen de la tienda">
           <div class="hero-panel-top">
             <div>
-              <strong style="font-family: var(--serif); font-weight: 600;">Evaluación integral</strong><br />
-              <span style="color: var(--ink-soft); font-size: .88rem;">Diseño, interacción y accesibilidad</span>
+              <strong style="font-family: var(--serif); font-weight: 600;">Tueste de la semana</strong><br />
+              <span style="color: var(--ink-soft); font-size: .88rem;">Huila, Colombia · notas a panela y cítricos</span>
             </div>
-            <span class="status">Enfoque activo</span>
+            <span class="status">Disponible hoy</span>
           </div>
 
           <figure class="figure-ground">
-            <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="vaseTitle">
-              <title id="vaseTitle">Ilustración de figura y fondo: un jarrón o dos rostros enfrentados</title>
+            <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tazaTitle">
+              <title id="tazaTitle">Ilustración de una taza de café humeante</title>
               <rect width="240" height="220" fill="var(--paper-soft)" />
-              <path d="M120 20
-                C 96 20 90 44 106 54
-                C 118 61 118 72 102 80
-                C 76 93 70 122 77 152
-                C 83 180 100 202 120 204
-                C 140 202 157 180 163 152
-                C 170 122 164 93 138 80
-                C 122 72 122 61 134 54
-                C 150 44 144 20 120 20 Z" fill="var(--ink)" />
+              <path d="M70 90 h90 a10 10 0 0 1 10 10 v40 a40 40 0 0 1 -40 40 h-30 a40 40 0 0 1 -40 -40 v-40 a10 10 0 0 1 10 -10 Z" fill="var(--ink)" />
+              <path d="M170 100 h14 a20 20 0 0 1 0 40 h-10" fill="none" stroke="var(--ink)" stroke-width="8" />
+              <path d="M95 70 c-6 -12 6 -14 2 -26" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" />
+              <path d="M120 70 c-6 -12 6 -14 2 -26" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" />
             </svg>
-            <figcaption>¿Un jarrón o dos rostros? La misma forma, dos lecturas: figura-fondo.</figcaption>
+            <figcaption>Cada bolsa indica finca, altitud y fecha de tueste.</figcaption>
           </figure>
 
           <div class="metric-grid">
-            <div class="metric"><strong>4</strong><span>bases cognitivas</span></div>
-            <div class="metric"><strong>7</strong><span>principios Gestalt</span></div>
-            <div class="metric"><strong>3</strong><span>leyes de interacción</span></div>
-            <div class="metric"><strong>5</strong><span>módulos pedagógicos</span></div>
+            <div class="metric"><strong>12</strong><span>orígenes activos</span></div>
+            <div class="metric"><strong>48h</strong><span>de tueste a envío</span></div>
+            <div class="metric"><strong>3</strong><span>planes de suscripción</span></div>
+            <div class="metric"><strong>5</strong><span>pasos para pedir</span></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="fundamentos">
+    <section class="section" id="origen">
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Alcance disciplinar</span>
-            <h2>HCI va más allá de las reglas visuales.</h2>
+            <span class="eyebrow">Nuestro origen</span>
+            <h2>Una tienda que empieza en la finca, no en el estante.</h2>
           </div>
           <p>
-            Una práctica rigurosa integra procesos cognitivos, mecanismos de interacción y conceptos de diseño para comprender cómo el usuario interpreta, decide y actúa.
+            Compramos verde directamente a caficultores, tostamos en lotes pequeños y cuidamos cada taza que sale del mostrador.
           </p>
         </div>
 
         <div class="cards">
           <article class="card">
             <div class="number">A</div>
-            <h3>Procesos cognitivos</h3>
-            <p>Percepción, memoria, atención y carga cognitiva condicionan la facilidad con la que se procesa una interfaz.</p>
+            <h3>Compra directa</h3>
+            <p>Pagamos precios justos a caficultores aliados y visitamos las fincas cada temporada de cosecha.</p>
           </article>
           <article class="card">
             <div class="number">B</div>
-            <h3>Mecánicas de interacción</h3>
-            <p>El feedback, la consistencia y la prevención de errores convierten acciones inciertas en experiencias predecibles.</p>
+            <h3>Tueste propio</h3>
+            <p>Tostamos en nuestro taller dos veces por semana para que el café llegue siempre fresco a tu taza.</p>
           </article>
           <article class="card">
             <div class="number">C</div>
-            <h3>Conceptos de diseño</h3>
-            <p>Los modelos mentales, las affordances y la accesibilidad ayudan a construir interfaces comprensibles e inclusivas.</p>
+            <h3>Atención en tienda</h3>
+            <p>Nuestro equipo de barismas te ayuda a elegir molienda, método de preparación y punto de tueste ideal.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="leyes">
+    <section class="section section-soft" id="cafes">
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Interacción y percepción</span>
-            <h2>Leyes que orientan decisiones concretas.</h2>
+            <span class="eyebrow">Guías de compra</span>
+            <h2>Todo lo que necesitas saber antes de elegir tu café.</h2>
           </div>
           <p>
-            Estas leyes no son recetas aisladas: funcionan mejor cuando se conectan con tareas reales, contexto de uso y evidencia de usuarios.
+            Estas guías te ayudan a decidir según cómo preparas tu café en casa, tu presupuesto y tu experiencia con la máquina o el método que uses.
           </p>
         </div>
 
         <div class="law-grid">
           <article class="law-card">
-            <h3>Ley de Fitts</h3>
-            <p>El tiempo de selección depende de la distancia y del tamaño del objetivo.</p>
+            <h3>Guía de molienda</h3>
+            <p>El punto de molienda cambia según el método: espresso, filtrado o prensa francesa.</p>
             <ul>
-              <li>Botones principales amplios.</li>
-              <li>Separación adecuada entre controles.</li>
-              <li>Objetivos táctiles fáciles de alcanzar.</li>
+              <li>Molienda fina para espresso.</li>
+              <li>Molienda media para filtrado.</li>
+              <li>Molienda gruesa para prensa francesa.</li>
             </ul>
           </article>
           <article class="law-card">
-            <h3>Ley de Hick</h3>
-            <p>Más alternativas aumentan el tiempo y el esfuerzo necesarios para decidir.</p>
+            <h3>Guía de intensidad</h3>
+            <p>Cuantas más opciones de tueste ofrecemos, más tiempo toma decidir; por eso agrupamos por perfil de sabor.</p>
             <ul>
-              <li>Agrupar y jerarquizar.</li>
-              <li>Aplicar filtros y búsqueda.</li>
-              <li>Usar revelación progresiva.</li>
+              <li>Suave: frutal y ácido.</li>
+              <li>Medio: equilibrado y dulce.</li>
+              <li>Intenso: achocolatado y con cuerpo.</li>
             </ul>
           </article>
           <article class="law-card">
-            <h3>Ley de Jakob</h3>
-            <p>Las personas esperan que una interfaz se comporte como otros productos que ya conocen.</p>
+            <h3>Envíos y devoluciones</h3>
+            <p>Trabajamos con los mismos tiempos y condiciones que ya conoces de otras tiendas en línea.</p>
             <ul>
-              <li>Respetar convenciones útiles.</li>
-              <li>Apoyar modelos mentales existentes.</li>
-              <li>Innovar sin sacrificar claridad.</li>
+              <li>Envío en 24 a 72 horas.</li>
+              <li>Devolución gratuita en 15 días.</li>
+              <li>Seguimiento del pedido por correo.</li>
             </ul>
           </article>
           <article class="law-card">
-            <h3>Principios Gestalt</h3>
-            <p>La organización visual influye en cómo se agrupan, priorizan e interpretan los elementos.</p>
+            <h3>Cómo armamos el catálogo</h3>
+            <p>Agrupamos los cafés por origen, método y ocasión para que sea fácil encontrar el tuyo.</p>
             <ul>
-              <li>Proximidad y similitud.</li>
-              <li>Continuidad y cierre.</li>
-              <li>Región común, figura-fondo y destino común.</li>
+              <li>Por finca y altitud.</li>
+              <li>Por método de preparación.</li>
+              <li>Por edición limitada o clásico de tienda.</li>
             </ul>
           </article>
         </div>
 
-        <div class="demo-panel" aria-label="Demostraciones interactivas de las leyes de Fitts y Hick">
+        <div class="demo-panel" aria-label="Selectores interactivos de presentación y variedad">
           <section class="demo-box">
-            <h3>Demostración: objetivos táctiles</h3>
-            <p style="color: var(--ink-soft);">Compara la facilidad para seleccionar un objetivo pequeño frente a uno amplio.</p>
+            <h3>Elige el tamaño de tu bolsa</h3>
+            <p style="color: var(--ink-soft);">Compara la presentación de 250 g frente a la de 1 kg para tu plan de consumo.</p>
             <div class="target-row">
-              <button class="target-small" aria-label="Objetivo táctil pequeño" data-target="small"></button>
-              <button class="target-large" aria-label="Objetivo táctil grande" data-target="large">64</button>
+              <button class="target-small" aria-label="Bolsa de 250 gramos" data-target="small"></button>
+              <button class="target-large" aria-label="Bolsa de 1 kilogramo" data-target="large">1 kg</button>
             </div>
-            <p id="fitts-feedback" role="status" aria-live="polite" style="margin-bottom: 0; color: var(--accent-dark); font-weight: 650;">Selecciona uno de los objetivos.</p>
+            <p id="fitts-feedback" role="status" aria-live="polite" style="margin-bottom: 0; color: var(--accent-dark); font-weight: 650;">Selecciona una presentación.</p>
           </section>
 
           <section class="demo-box">
-            <h3>Demostración: gestión de opciones</h3>
-            <p style="color: var(--ink-soft);">Las opciones están agrupadas por intención para reducir la exploración.</p>
+            <h3>Elige tu variedad favorita</h3>
+            <p style="color: var(--ink-soft);">Las opciones están agrupadas por perfil de sabor para elegir más rápido.</p>
             <div class="choice-grid" id="choice-grid">
-              <button class="choice" aria-pressed="false">Crear cuenta</button>
-              <button class="choice" aria-pressed="false">Iniciar sesión</button>
-              <button class="choice" aria-pressed="false">Recuperar acceso</button>
-              <button class="choice" aria-pressed="false">Contactar soporte</button>
+              <button class="choice" aria-pressed="false">Huila frutal</button>
+              <button class="choice" aria-pressed="false">Tolima chocolate</button>
+              <button class="choice" aria-pressed="false">Etiopía floral</button>
+              <button class="choice" aria-pressed="false">Descafeinado suave</button>
             </div>
-            <p id="hick-feedback" role="status" aria-live="polite" style="margin-bottom: 0; color: var(--accent-dark); font-weight: 650;">Elige una acción principal.</p>
+            <p id="hick-feedback" role="status" aria-live="polite" style="margin-bottom: 0; color: var(--accent-dark); font-weight: 650;">Elige tu café favorito.</p>
           </section>
         </div>
       </div>
@@ -815,75 +810,72 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Cognición y usabilidad</span>
-            <h2>Diseñar para capacidades humanas reales.</h2>
+            <span class="eyebrow">Cuidado del café</span>
+            <h2>Cómo conservar cada bolsa en su mejor punto.</h2>
           </div>
-          <p>La interfaz debe reducir esfuerzo innecesario, ofrecer señales claras y permitir la recuperación cuando algo sale mal.</p>
+          <p>Un buen café en casa depende tanto del tueste como de cómo lo guardas, lo mides y lo preparas.</p>
         </div>
 
         <table class="principles-table">
           <thead>
             <tr>
-              <th scope="col">Concepto</th>
-              <th scope="col">Aplicación recomendada</th>
+              <th scope="col">Cuidado</th>
+              <th scope="col">Recomendación de la tienda</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Memoria</strong></td>
-              <td>Mostrar información contextual y evitar que la persona recuerde datos entre pasos.</td>
+              <td><strong>Almacenamiento</strong></td>
+              <td>Guarda el café en un recipiente hermético, lejos de luz, calor y humedad.</td>
             </tr>
             <tr>
-              <td><strong>Carga cognitiva</strong></td>
-              <td>Simplificar tareas, dividir procesos y retirar elementos que no ayudan al objetivo principal.</td>
+              <td><strong>Molienda</strong></td>
+              <td>Muele justo antes de preparar para conservar los aromas del tueste.</td>
             </tr>
             <tr>
-              <td><strong>Retroalimentación</strong></td>
-              <td>Comunicar estados, confirmaciones, tiempos de espera y resultados de cada acción.</td>
+              <td><strong>Dosis</strong></td>
+              <td>Usa una báscula: 60 g de café por litro de agua como punto de partida.</td>
             </tr>
             <tr>
-              <td><strong>Errores</strong></td>
-              <td>Prevenir entradas inválidas y ofrecer mensajes útiles, corrección y opciones de deshacer.</td>
+              <td><strong>Agua</strong></td>
+              <td>Prepara con agua filtrada, entre 90 y 96 °C según el método.</td>
             </tr>
             <tr>
-              <td><strong>Consistencia</strong></td>
-              <td>Mantener patrones internos estables y respetar convenciones externas conocidas.</td>
+              <td><strong>Consumo</strong></td>
+              <td>Disfruta la bolsa dentro de las primeras cuatro semanas después del tueste.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="section section-soft" id="herramientas">
+    <section class="section section-soft" id="servicios">
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Modelado y empatía</span>
-            <h2>Herramientas conectadas con evidencia.</h2>
+            <span class="eyebrow">Servicios de la tienda</span>
+            <h2>Más que una bolsa de café.</h2>
           </div>
-          <p>Los diagramas y mapas aportan valor solo cuando representan necesidades, tareas y comportamientos observados.</p>
+          <p>Ofrecemos servicios pensados para quienes preparan café en casa y para negocios que buscan un proveedor constante.</p>
         </div>
 
         <div class="tool-grid">
           <article class="tool-card">
-            <h3>User flows</h3>
-            <p>Representan cómo una persona entra, actúa, decide, se equivoca y alcanza un resultado.</p>
-            <div class="tag-list" aria-label="Elementos de un flujo de usuario">
-              <span class="tag">Punto de entrada</span>
-              <span class="tag">Acciones</span>
-              <span class="tag">Decisiones</span>
-              <span class="tag">Errores</span>
-              <span class="tag">Rutas alternativas</span>
+            <h3>Plan de suscripción</h3>
+            <p>Recibe café fresco cada 2 o 4 semanas, con la variedad y cantidad que elijas.</p>
+            <div class="tag-list" aria-label="Beneficios del plan de suscripción">
+              <span class="tag">Envío incluido</span>
+              <span class="tag">Cambia o pausa cuando quieras</span>
+              <span class="tag">Descuento por frecuencia</span>
             </div>
           </article>
           <article class="tool-card">
-            <h3>Mapas de empatía</h3>
-            <p>Organizan hallazgos sobre lo que la persona dice, piensa, hace y siente sin reemplazar la investigación.</p>
-            <div class="tag-list" aria-label="Fuentes de evidencia para mapas de empatía">
-              <span class="tag">Entrevistas</span>
-              <span class="tag">Observación</span>
-              <span class="tag">Encuestas</span>
-              <span class="tag">Pruebas de usabilidad</span>
+            <h3>Café para negocios</h3>
+            <p>Abastecemos cafeterías, oficinas y restaurantes con pedidos recurrentes y precios por volumen.</p>
+            <div class="tag-list" aria-label="Beneficios para negocios">
+              <span class="tag">Facturación mensual</span>
+              <span class="tag">Capacitación de barismas</span>
+              <span class="tag">Soporte de equipo</span>
             </div>
           </article>
         </div>
@@ -893,26 +885,26 @@
     <section class="section">
       <div class="container explainable">
         <div class="quote-card">
-          <p>"Una solución funcional explicable permite relacionar cada decisión de diseño con un principio, una evidencia o un requisito."</p>
-          <span>Diseño argumentado, no decorativo.</span>
+          <p>"Cada bolsa que vendemos puede rastrearse hasta la finca, el lote y la fecha exacta de tueste."</p>
+          <span>Trazabilidad, no solo etiqueta.</span>
         </div>
 
-        <div class="checklist" aria-label="Criterios de una solución explicable">
+        <div class="checklist" aria-label="Por qué elegir Grano y Fuego">
           <div class="check-item">
             <span class="check-icon" aria-hidden="true">✓</span>
-            <div><strong>Principios cognitivos</strong><br /><span style="color: var(--ink-soft);">La decisión responde a cómo las personas perciben, recuerdan y deciden.</span></div>
+            <div><strong>Compra directa a origen</strong><br /><span style="color: var(--ink-soft);">Pagamos precios justos y visitamos las fincas cada cosecha.</span></div>
           </div>
           <div class="check-item">
             <span class="check-icon" aria-hidden="true">✓</span>
-            <div><strong>Evidencia de usuarios</strong><br /><span style="color: var(--ink-soft);">La solución se apoya en datos cualitativos o cuantitativos.</span></div>
+            <div><strong>Tueste fresco cada semana</strong><br /><span style="color: var(--ink-soft);">Nunca guardamos café en bodega por más de un mes.</span></div>
           </div>
           <div class="check-item">
             <span class="check-icon" aria-hidden="true">✓</span>
-            <div><strong>Requisitos y accesibilidad</strong><br /><span style="color: var(--ink-soft);">La interfaz cumple funciones, restricciones y criterios WCAG.</span></div>
+            <div><strong>Envío y devolución sin fricción</strong><br /><span style="color: var(--ink-soft);">Entrega rápida y devoluciones gratuitas dentro de 15 días.</span></div>
           </div>
           <div class="check-item">
             <span class="check-icon" aria-hidden="true">✓</span>
-            <div><strong>Trade-offs explícitos</strong><br /><span style="color: var(--ink-soft);">Se explica por qué un patrón fue elegido frente a otras alternativas.</span></div>
+            <div><strong>Recomendación honesta</strong><br /><span style="color: var(--ink-soft);">Te ayudamos a elegir el café que se ajusta a tu método, no el más caro.</span></div>
           </div>
         </div>
       </div>
@@ -922,30 +914,30 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Integración pedagógica</span>
-            <h2>Una secuencia modular y progresiva.</h2>
+            <span class="eyebrow">Cómo comprar</span>
+            <h2>Del catálogo a tu taza en cinco pasos.</h2>
           </div>
-          <p>El recorrido comienza con la comprensión de la cognición humana y termina con la validación de soluciones mediante accesibilidad y pruebas.</p>
+          <p>El recorrido de compra empieza al elegir el origen y termina cuando recibes tu bolsa recién tostada en casa.</p>
         </div>
 
         <ol class="module-list">
-          <li><div><strong>Fundamentos cognitivos y perceptuales</strong><br /><span style="color: var(--ink-soft);">Gestalt, percepción, memoria y atención.</span></div></li>
-          <li><div><strong>Leyes de interacción y affordances</strong><br /><span style="color: var(--ink-soft);">Fitts, Hick, Jakob y señales de uso.</span></div></li>
-          <li><div><strong>Feedback y gestión de errores</strong><br /><span style="color: var(--ink-soft);">Estados, consistencia, prevención y recuperación.</span></div></li>
-          <li><div><strong>Accesibilidad y pruebas</strong><br /><span style="color: var(--ink-soft);">WCAG, teclado, lectores de pantalla y validación con usuarios.</span></div></li>
-          <li><div><strong>Modelado basado en datos</strong><br /><span style="color: var(--ink-soft);">User flows y mapas de empatía sustentados en evidencia.</span></div></li>
+          <li><div><strong>Elige tu origen</strong><br /><span style="color: var(--ink-soft);">Filtra por país, altitud o perfil de sabor.</span></div></li>
+          <li><div><strong>Elige método y molienda</strong><br /><span style="color: var(--ink-soft);">Espresso, filtrado, prensa francesa o grano entero.</span></div></li>
+          <li><div><strong>Elige presentación</strong><br /><span style="color: var(--ink-soft);">Bolsas de 250 g, 500 g o 1 kg.</span></div></li>
+          <li><div><strong>Compra única o suscripción</strong><br /><span style="color: var(--ink-soft);">Recibe una vez o programa envíos recurrentes.</span></div></li>
+          <li><div><strong>Recibe y prepara</strong><br /><span style="color: var(--ink-soft);">Sigue la ficha de preparación incluida en cada bolsa.</span></div></li>
         </ol>
       </div>
     </section>
 
-    <section class="section" id="aplicacion">
+    <section class="section" id="pedido">
       <div class="container">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Caso práctico</span>
-            <h2>Formulario de registro móvil.</h2>
+            <span class="eyebrow">Suscríbete</span>
+            <h2>Arma tu plan de café.</h2>
           </div>
-          <p>Este ejemplo aplica revelación progresiva, objetivos táctiles amplios, validación en línea y feedback accesible.</p>
+          <p>Déjanos tus datos y te contactamos para definir origen, frecuencia y presentación de tu primer envío.</p>
         </div>
 
         <div class="form-demo">
@@ -955,13 +947,13 @@
               <div class="field">
                 <label for="name">Nombre completo</label>
                 <input id="name" name="name" autocomplete="name" required aria-describedby="name-help name-error" />
-                <small id="name-help">Usa el nombre con el que deseas identificarte.</small>
+                <small id="name-help">Así identificaremos tu pedido en tienda.</small>
                 <span class="field-error" id="name-error" aria-live="polite"></span>
               </div>
               <div class="field">
                 <label for="email">Correo electrónico</label>
                 <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error" />
-                <small id="email-help">Te enviaremos una confirmación de registro.</small>
+                <small id="email-help">Te enviaremos la confirmación de tu suscripción.</small>
                 <span class="field-error" id="email-error" aria-live="polite"></span>
               </div>
             </div>
@@ -970,7 +962,7 @@
               <button class="btn btn-primary" type="submit">Continuar</button>
             </div>
             <div class="feedback" id="form-feedback" role="status" aria-live="polite" tabindex="-1" hidden>
-              Datos válidos. Puedes continuar al siguiente paso.
+              Datos recibidos. Te contactaremos para definir tu primer envío.
             </div>
           </form>
         </div>
@@ -979,7 +971,7 @@
   </main>
 
   <footer>
-    <div class="container">Briefing interactivo de Fundamentos y Principios de HCI · Diseño corporativo, claro y accesible.</div>
+    <div class="container">Grano y Fuego · Café de especialidad tostado en pequeños lotes.</div>
   </footer>
 
   <script>
@@ -988,8 +980,8 @@
       button.addEventListener('click', () => {
         const isLarge = button.dataset.target === 'large';
         fittsFeedback.textContent = isLarge
-          ? 'Objetivo amplio: selección más rápida y con menor riesgo de error.'
-          : 'Objetivo pequeño: requiere mayor precisión y aumenta la probabilidad de error.';
+          ? 'Bolsa de 1 kg seleccionada: ideal para consumo frecuente o para compartir.'
+          : 'Bolsa de 250 g seleccionada: perfecta para probar una variedad nueva.';
       });
     });
 
@@ -999,7 +991,7 @@
       choice.addEventListener('click', () => {
         choices.forEach((item) => item.setAttribute('aria-pressed', 'false'));
         choice.setAttribute('aria-pressed', 'true');
-        hickFeedback.textContent = `Acción seleccionada: ${choice.textContent}. La jerarquía reduce la carga de decisión.`;
+        hickFeedback.textContent = `Variedad seleccionada: ${choice.textContent}. La agruparemos con tu presentación elegida.`;
       });
     });
 
@@ -1026,7 +1018,7 @@
         emailError.textContent = 'Escribe tu correo electrónico.';
         valid = false;
       } else if (!emailInput.validity.valid) {
-        emailError.textContent = 'Usa un formato válido, por ejemplo: nombre@empresa.com.';
+        emailError.textContent = 'Usa un formato válido, por ejemplo: nombre@correo.com.';
         valid = false;
       }
 
