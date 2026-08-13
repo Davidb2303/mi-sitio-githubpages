@@ -586,6 +586,144 @@
 
     .feedback[hidden] { display: none; }
 
+    .saved-list {
+      margin-top: 1.4rem;
+      border-top: 1px dashed var(--line);
+      padding-top: 1.2rem;
+    }
+
+    .saved-list h4 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 0 .7rem;
+      color: var(--ink);
+    }
+
+    .saved-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: .5rem;
+    }
+
+    .saved-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      background: var(--paper-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: .6rem .8rem;
+      font-size: .88rem;
+    }
+
+    .saved-list li span:first-child { font-weight: 650; }
+    .saved-list li span:last-child { color: var(--ink-soft); }
+
+    .saved-empty { color: var(--ink-soft); font-size: .88rem; font-style: italic; }
+
+    /* Carousel */
+    .carousel-section { padding: 0 0 4rem; }
+
+    .carousel {
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .carousel-viewport {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 1.1rem;
+      scroll-behavior: smooth;
+      padding-bottom: .5rem;
+      scrollbar-width: none;
+    }
+
+    .carousel-viewport::-webkit-scrollbar { display: none; }
+
+    .carousel-slide {
+      scroll-snap-align: start;
+      flex: 0 0 min(340px, 82vw);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+
+    .carousel-slide-media {
+      background: var(--paper-soft);
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      aspect-ratio: 4 / 3;
+    }
+
+    .carousel-slide-media svg { width: 60%; height: 60%; }
+
+    .carousel-slide h3 { margin: 0; }
+    .carousel-slide p { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+
+    .carousel-slide-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .82rem;
+      color: var(--accent-dark);
+      font-weight: 650;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.1rem;
+    }
+
+    .carousel-arrows { display: flex; gap: .6rem; }
+
+    .carousel-arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .carousel-arrow:hover { border-color: var(--accent-dark); color: var(--accent-dark); }
+    .carousel-arrow:disabled { opacity: .35; cursor: default; }
+
+    .carousel-dots {
+      display: flex;
+      gap: .5rem;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--line);
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .carousel-dot[aria-current="true"] {
+      background: var(--accent-dark);
+      width: 22px;
+      border-radius: 999px;
+    }
+
     footer {
       padding: 2.2rem 0;
       border-top: 1px solid var(--line);
@@ -694,6 +832,82 @@
             <div class="metric"><strong>5</strong><span>pasos para pedir</span></div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="carousel-section" aria-label="Cafés destacados de la semana">
+      <div class="container">
+        <div class="section-heading" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+          <div>
+            <span class="eyebrow">Recién tostados</span>
+            <h2>Cafés destacados esta semana.</h2>
+          </div>
+          <p>Desliza o usa las flechas para conocer los orígenes que tenemos disponibles ahora mismo en tienda.</p>
+        </div>
+
+        <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Cafés destacados">
+          <div class="carousel-viewport" id="carousel-viewport" tabindex="0">
+            <article class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 4, Huila, Colombia">
+              <div class="carousel-slide-media">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                  <circle cx="50" cy="50" r="42" fill="var(--accent-tint)" />
+                  <path d="M30 62 h40 a4 4 0 0 1 4 4 v6 a16 16 0 0 1 -16 16 h-16 a16 16 0 0 1 -16 -16 v-6 a4 4 0 0 1 4 -4 Z" fill="var(--ink)" />
+                  <path d="M74 66 h6 a9 9 0 0 1 0 18 h-4" fill="none" stroke="var(--ink)" stroke-width="4" />
+                </svg>
+              </div>
+              <h3>Huila, Colombia</h3>
+              <p>Notas a panela y cítricos. Lavado, altitud 1750 m.</p>
+              <div class="carousel-slide-meta"><span>Tueste medio</span><span>Bolsa 250 g</span></div>
+            </article>
+
+            <article class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 4, Tolima, Colombia">
+              <div class="carousel-slide-media">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                  <circle cx="50" cy="50" r="42" fill="var(--accent-tint)" />
+                  <path d="M30 62 h40 a4 4 0 0 1 4 4 v6 a16 16 0 0 1 -16 16 h-16 a16 16 0 0 1 -16 -16 v-6 a4 4 0 0 1 4 -4 Z" fill="var(--ink)" />
+                  <path d="M74 66 h6 a9 9 0 0 1 0 18 h-4" fill="none" stroke="var(--ink)" stroke-width="4" />
+                </svg>
+              </div>
+              <h3>Tolima, Colombia</h3>
+              <p>Achocolatado y con cuerpo. Honey, altitud 1600 m.</p>
+              <div class="carousel-slide-meta"><span>Tueste intenso</span><span>Bolsa 500 g</span></div>
+            </article>
+
+            <article class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4, Etiopía, Yirgacheffe">
+              <div class="carousel-slide-media">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                  <circle cx="50" cy="50" r="42" fill="var(--accent-tint)" />
+                  <path d="M30 62 h40 a4 4 0 0 1 4 4 v6 a16 16 0 0 1 -16 16 h-16 a16 16 0 0 1 -16 -16 v-6 a4 4 0 0 1 4 -4 Z" fill="var(--ink)" />
+                  <path d="M74 66 h6 a9 9 0 0 1 0 18 h-4" fill="none" stroke="var(--ink)" stroke-width="4" />
+                </svg>
+              </div>
+              <h3>Etiopía, Yirgacheffe</h3>
+              <p>Floral y a jazmín. Natural, altitud 1900 m.</p>
+              <div class="carousel-slide-meta"><span>Tueste claro</span><span>Bolsa 250 g</span></div>
+            </article>
+
+            <article class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 4, Guatemala, Antigua">
+              <div class="carousel-slide-media">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                  <circle cx="50" cy="50" r="42" fill="var(--accent-tint)" />
+                  <path d="M30 62 h40 a4 4 0 0 1 4 4 v6 a16 16 0 0 1 -16 16 h-16 a16 16 0 0 1 -16 -16 v-6 a4 4 0 0 1 4 -4 Z" fill="var(--ink)" />
+                  <path d="M74 66 h6 a9 9 0 0 1 0 18 h-4" fill="none" stroke="var(--ink)" stroke-width="4" />
+                </svg>
+              </div>
+              <h3>Guatemala, Antigua</h3>
+              <p>Especiado y dulce. Lavado, altitud 1700 m.</p>
+              <div class="carousel-slide-meta"><span>Tueste medio</span><span>Bolsa 1 kg</span></div>
+            </article>
+          </div>
+
+          <div class="carousel-controls">
+            <div class="carousel-arrows">
+              <button type="button" class="carousel-arrow" id="carousel-prev" aria-label="Café anterior">&#8592;</button>
+              <button type="button" class="carousel-arrow" id="carousel-next" aria-label="Café siguiente">&#8594;</button>
+            </div>
+            <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Selecciona un café destacado"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -965,6 +1179,12 @@
               Datos recibidos. Te contactaremos para definir tu primer envío.
             </div>
           </form>
+
+          <div class="saved-list">
+            <h4>Suscripciones guardadas en este dispositivo</h4>
+            <ul id="saved-list-items"></ul>
+            <p class="saved-empty" id="saved-empty-msg">Todavía no has guardado ninguna suscripción.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -995,6 +1215,117 @@
       });
     });
 
+    // ---- Carrusel de cafés destacados ----
+    (function initCarousel() {
+      const viewport = document.getElementById('carousel-viewport');
+      const slides = Array.from(viewport.children);
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const dotsWrap = document.getElementById('carousel-dots');
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Ir al café ${i + 1} de ${slides.length}`);
+        dot.addEventListener('click', () => {
+          slides[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+        });
+        dotsWrap.appendChild(dot);
+      });
+      const dots = Array.from(dotsWrap.children);
+
+      function updateActiveSlide() {
+        const viewportRect = viewport.getBoundingClientRect();
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        slides.forEach((slide, i) => {
+          const rect = slide.getBoundingClientRect();
+          const distance = Math.abs(rect.left - viewportRect.left);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = i;
+          }
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', i === closestIndex ? 'true' : 'false'));
+        prevBtn.disabled = closestIndex === 0;
+        nextBtn.disabled = closestIndex === slides.length - 1;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: -(slides[0].getBoundingClientRect().width + 18), behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: slides[0].getBoundingClientRect().width + 18, behavior: 'smooth' });
+      });
+
+      viewport.addEventListener('scroll', () => {
+        window.clearTimeout(viewport._scrollTimer);
+        viewport._scrollTimer = window.setTimeout(updateActiveSlide, 80);
+      });
+
+      viewport.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight') { nextBtn.click(); event.preventDefault(); }
+        if (event.key === 'ArrowLeft') { prevBtn.click(); event.preventDefault(); }
+      });
+
+      updateActiveSlide();
+    })();
+
+    // ---- Formulario + almacenamiento ----
+    // Nota: localStorage no funciona dentro de los artifacts de Claude.ai,
+    // así que estas suscripciones se guardan en memoria (se pierden al recargar
+    // la página). Si publicas este archivo en tu propio hosting, puedes
+    // cambiar "memoryStore" por localStorage sin tocar el resto del código
+    // (ver comentario más abajo).
+    const memoryStore = {
+      data: [],
+      get(key) {
+        const raw = this.data.find((item) => item.key === key);
+        return raw ? raw.value : null;
+      },
+      set(key, value) {
+        const existing = this.data.find((item) => item.key === key);
+        if (existing) existing.value = value;
+        else this.data.push({ key, value });
+      }
+    };
+
+    const STORAGE_KEY = 'granoyfuego_suscripciones';
+
+    function loadSubscriptions() {
+      try {
+        const raw = memoryStore.get(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (err) {
+        return [];
+      }
+    }
+
+    function saveSubscriptions(list) {
+      memoryStore.set(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderSubscriptions() {
+      const list = loadSubscriptions();
+      const ul = document.getElementById('saved-list-items');
+      const emptyMsg = document.getElementById('saved-empty-msg');
+      ul.innerHTML = '';
+
+      if (list.length === 0) {
+        emptyMsg.style.display = 'block';
+        return;
+      }
+      emptyMsg.style.display = 'none';
+
+      list.forEach((entry) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${entry.name}</span><span>${entry.email}</span>`;
+        ul.appendChild(li);
+      });
+    }
+
     const form = document.getElementById('registration-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -1023,13 +1354,21 @@
       }
 
       if (valid) {
+        const list = loadSubscriptions();
+        list.push({ name: nameInput.value.trim(), email: emailInput.value.trim() });
+        saveSubscriptions(list);
+        renderSubscriptions();
+
         formFeedback.hidden = false;
         formFeedback.focus?.();
+        form.reset();
       } else {
         const firstInvalid = !nameInput.value.trim() ? nameInput : emailInput;
         firstInvalid.focus();
       }
     });
+
+    renderSubscriptions();
   </script>
 </body>
 </html>
