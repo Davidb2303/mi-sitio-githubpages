@@ -1296,7 +1296,7 @@
 
     function loadSubscriptions() {
       try {
-        const raw = localStorage.get(STORAGE_KEY);
+        const raw = memoryStore.get(STORAGE_KEY);
         return raw ? JSON.parse(raw) : [];
       } catch (err) {
         return [];
@@ -1304,7 +1304,7 @@
     }
 
     function saveSubscriptions(list) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      memoryStore.set(STORAGE_KEY, JSON.stringify(list));
     }
 
     function renderSubscriptions() {
